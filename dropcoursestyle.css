@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Light gray background for contrast */
+}
+
+/* Header */
+header {
+  background-color: #359dff;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+
+/* Layout */
+.container {
+  display: flex;
+  max-width: 1200px; /* Limits width for readability */
+  margin: auto;
+  padding: 20px;
+}
+
+
+
+/* Navigation Bar */
+nav {
+  width: 220px;
+  background: #ffffff; /* White for contrast */
+  padding: 20px;
+  border-radius: 10px; /* Soft rounded edges */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Button depth */
+}
+
+nav a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight enlarge effect */
+}
+
+
+.form-container {
+  display: flex;
+  max-width : 1200px; /* Limits width for readability */
+  margin: auto;
+  padding: 20px;
+}
+
+/* Input Area */
+form {
+  width: 1000px;
+  background: #ffffff; /* White for contrast */
+  padding: 20px;
+  border-radius: 10px; /* Soft rounded edges */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Labels for Input Fields */
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* Input Fields */
+input {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+/* Main Content */
+main {
+  flex-grow: 1;
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px; /* Prevent content from touching footer */
+  position:fixed;bottom:0;left:0;right:0;height:30px; /* Stick to bottom */
+  width: 100%;
+  font-size: 14px;
+}
+
+.submitbutton{
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  width: 100px;
+  margin:auto;
+  display:block;
+  position: center;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Button depth */
+}
+
+.rank{
+  width: 10%;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin:auto;
+  display:block;
+  border: 1px solid #ccc;
+}
