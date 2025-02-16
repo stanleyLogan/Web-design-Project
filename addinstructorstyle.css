@@ -16,6 +16,55 @@ header {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
   }
 
+
+  /* Layout */
+.container {
+    display: flex;
+    max-width: 1200px; /* Limits width for readability */
+    margin: auto;
+    padding: 20px;
+  }
+
+
+  
+/* Navigation Bar */
+nav {
+    width: 220px;
+    background: #ffffff; /* White for contrast */
+    padding: 20px;
+    border-radius: 10px; /* Soft rounded edges */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 10px 0;
+  }
+  
+  nav a {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Button depth */
+  }
+  
+  nav a:hover {
+    background-color: #0056b3;
+    transform: scale(1.05); /* Slight enlarge effect */
+  }
+
   
 .form-container {
     display: flex;
@@ -66,7 +115,7 @@ footer {
     text-align: center;
     padding: 15px;
     margin-top: 30px; /* Prevent content from touching footer */
-    position: static; /* Stick to the bottom */
+    position:fixed;bottom:0;left:0;right:0;height:30px; /* Stick to bottom */
     width: 100%;
     font-size: 14px;
   }
