@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Project 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <header>User Manual</header>
+
+    <div class = "container">
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Enrollment Page.html">Enrollment</a></li>
+          <li><a href="addinstructor.html">Add an Instructor</a></li>
+          <li><a href="addcourse.html">Add a Course</a></li>
+          <li><a href="registercourse.html">Register for Courses</a></li>
+          <li><a href="dropcourse.html">Need to drop a course?</a></li>
+          <li><a href="manuels.html">Manuels</a></li>
+        </ul>
+      </nav>
+
+      <nav>
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#pages">Page Summaries</a></li>
+          <li><a href="#descriptions">Detailed descriptions</a></li>
+          
+        </ul>
+      </nav>
+
+      <main>
+        <section id="overview">
+          <h2>Overview of the Course Registration System</h2>
+          <p>
+            The Course Registration System is designed to facilitate student registration, course management, and instructor handling within a web-based interface. The system connects to a relational database to store student, course, and instructor data.
+          </p>
+          <p>
+            The system has a simple user interface made up of HTML forms that interact with the backend via server-side logic. The web interface handles user requests, such as enrolling students, adding instructors, and dropping courses, while the backend processes and stores the data in a database.
+          </p>
+        </section>
+
+        <section id="pages">
+          <h2>Summary of the Contents of Each Page</h2>
+          <ul>
+            <li><strong>Home Page:</strong> The main landing page with links to other sections of the registration system.</li>
+            <li><strong>Enrollment Page:</strong> A form for instructors to enroll a new student.</li>
+            <li><strong>Add Instructor:</strong> A page for adding new instructors to the system.</li>
+            <li><strong>Add Course:</strong> A form to add new courses to the system.</li>
+            <li><strong>Register for Courses:</strong> A page where students can select courses to register for.</li>
+            <li><strong>Drop Course:</strong> A form that allows students to drop a course they are enrolled in.</li>
+            <li><strong>User Manuals:</strong> A page linking to both user and programmer manuals.</li>
+          </ul>
+        </section>
+
+        <section id = "descriptions">
+          <h2>Detailed descriptions</h2>
+          <p>Here is a detailed description for each page</p>
+
+          <h3>Home Page</h3>
+          <p>There is no forms on this page. Only a navigation bar on the left that has a link to each page within the system.</p>
+
+          <h3>Enrollment Page</h3>
+          <p>The enrollment page will allow an instructor to add a student to enrollment</p>
+          <h4>Layout</h4>
+          <p>This page has five different forms.</p>
+          <ul>
+            <li>First name: only charaters are acceptable(Example: John) </li>
+            <li>Last name: Also only charaters are acceptable(Example: Smith) </li>
+            <li>Student year: Select the drop down box to select the year of the student.</li>
+            <li>Student Major: Just like the first and last name fields, you may only input charaters into this field(Example: Computer Science)</li>
+            <li>Student Email: Here is where you input the student's email. You should only insert charaters with the @ symbol.(Example: something@email.com)</li>
+          </ul>
+          <p>Click the submit Enrollment button to save the student into the enrollment system.</p>
+
+          <h3>Add Instructor</h3>
+          <p>This page allows for instructors to be added to the system. Like the Enrollment page, it has you put in the Instructor's information</p>
+          <h4>Layout</h4>
+          <p>This page has five differnt forms to input information.</p>
+          <ul>
+            <li>Instructor First Name:Like the enrollment page, acceptable inputs are characters only.(Example: John) </li>
+            <li>Instructor Last Name: Like the other forms only characters are allowed.(Example: Smith)</li>
+            <li>Instructor Department: Enter the department the instructor is in. Only characters for this form as well.(Example: Chemistry)</li>
+            <li>Instructor Email:Here is where you input the email for the instructor. You may use special characters in the form. (Example: something@email.com)</li>
+            <li>Instructor Drop Down: use this dropdown box to select the rank for the instructor</li>
+          </ul>
+          <p>Click the Submit button to input the instructor into the system.</p>
+
+          <h3>Add a Course</h3>
+          <p>You can add a course with everything you need to add a course into the system.</p>
+          <h4>There are 14 forms that you can enter into</h4>
+          <ul>
+            <li>Semester: This is only a dropdown to select a semester(Fall, summer, spring)</li>
+            <li>Year:Add the year this course is offered. You may only input numbers into this form.(Example:2025)</li>
+            <li>Course Prefix: Add the prefix for the course into this form. This will only accept characters(Example: CSCI)</li>
+            <li>Course Number: Add the course number into this form. This will only accept numbers(Example: 101, 300, ect)</li>
+            <li>Course Section: Enter section for the course into this form. This will only accept numbers(Example: 01, 02, ect.)</li>
+            <li>Course name: Enter the name of the course into this form. This will only accept characters(Example: Programming 1) </li>
+            <li>Room: Enter the room and the number of the room into this form. This will accept both characters and numbers.(Example: Selby 239) </li>
+            <li>Time: The next four dropdowns are used to select the times for the course. Use the dropdown to select the time the course will be held.</li>
+            <li>Credit Hours: Use this form to input the amount of credit hours the course offers. This will only accept numbers(Example: 3) </li>
+            <li>Instructor First Name: Use this form to enter the first name of the Insturctor hosting the course. This will only accept characters(Example: John)</li>
+            <li>Instructor First Name: Use this form to enter the last name of the Insturctor hosting the course. This will only accept characters(Example: Smith)</li>
+            <li>Enrollment Cap: Enter the amount of students allowed in this course here. This will only accept numbers(Example: 28)</li>
+          </ul>
+          <p>Use the submit button to add the course into the system.</p>
+
+          <h3>Register for Courses</h3>
+          <p>You can use this page to register a student into a course. You can enter all the information needed into this page.</p>
+          <h4>Layout</h4>
+          <p>There are seven forms to enter information into.</p>
+          <ul>
+            <li>Student First Name: Enter the student's first name here.</li>
+            <li>Student Last Name: Enter the student's last name here</li>
+            <li>Semester: use the dropdown to select the semester the student is taking the course.</li>
+            <li>Year: Enter the year the student is taking course. Only numbers is accepted here(Example: 2025)</li>
+          </ul>
+        </section>
+
+        
+
+      </main>
+
+    </div>
+
+    <footer>Page Presented By Austin Amash | Gavin Burgess | Samual Creameans | Logan Stanley</footer>
+
+</body>
