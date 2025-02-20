@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Course</title>
+  <link rel="stylesheet" href="addcoursestyle.css">
+</head>
+<body>
+    <header>Add a Course</header>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Enrollment Page.html">Enrollment</a></li>
+                <li><a href="addinstructor.html">Add an Instructor</a></li>
+                <li><a href="addcourse.html">Add a Course</a></li>
+                <li><a href="registercourse.html">Register for Courses</a></li>
+                <li><a href="dropcourse.html">Need to drop a course?</a></li>
+            </ul>
+        </nav>
+        <main>
+            <p>This page allows you to add a new course to the system.</p>
+            <div class="form-container">
+                <form>
+                    <label for="semester">Semester:</label>
+                    <select id="semester" name="semester">
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Fall">Fall</option>
+                    </select>
+
+                    <label for="year">Year:</label>
+                    <input type="text" id="year" name="year">
+                    
+                    <label for="coursePrefix">Course Prefix:</label>
+                    <input type="text" id="coursePrefix" name="coursePrefix">
+
+                    <label for="courseNumber">Course Number:</label>
+                    <input type="text" id="courseNumber" name="courseNumber">
+
+                    <label for="courseSection">Course Section:</label>
+                    <input type="text" id="courseSection" name="courseSection">
+
+                    <label for="courseName">Course Name:</label>
+                    <input type="text" id="courseName" name="courseName">
+
+                    <label for="room">Room (Building & Number):</label>
+                    <input type="text" id="room" name="room">
+
+                    <label for="time-mwf">Time (Monday, Wednesday, Friday):</label>
+                    <select id="time-mwf" name="time-mwf">
+                        <option value="8-850">8:00 AM to 8:50 AM</option>
+                        <option value="9-950">9:00 AM to 9:50 AM</option>
+                        <option value="10-1050">10:00 AM to 10:50 AM</option>
+                        <option value="11-1150">11:00 AM to 11:50 AM</option>
+                        <option value="12-1250">12:00 PM to 12:50 PM</option>
+                        <option value="1-150">1:00 PM to 1:50 PM</option>
+                        <option value="2-250">2:00 PM to 2:50 PM</option>
+                        <option value="3-350">3:00 PM to 3:50 PM</option>
+                    </select>
+                    
+                    <label for="time-mw">Time (Monday, Wednesday):</label>
+                    <select id="time-mw" name="time-mw">
+                        <option value="9-1050">9:00 AM to 10:50 AM</option>
+                        <option value="1-215">1:00 PM to 2:15 PM</option>
+                        <option value="1-250">1:00 PM to 2:50 PM</option>
+                        <option value="2-315">2:00 PM to 3:15 PM</option>
+                    </select>
+                    
+                    <label for="time-tth">Time (Tuesday, Thursday):</label>
+                    <select id="time-tth" name="time-tth">
+                        <option value="8-915">8:00 AM to 9:15 AM</option>
+                        <option value="9-1045">9:30 AM to 10:45 AM</option>
+                        <option value="11-1215">11:00 AM to 12:15 PM</option>
+                        <option value="1-215">1:00 PM to 2:15 PM</option>
+                        <option value="2-345">2:30 PM to 3:45 PM</option>
+                    </select>
+                    
+                    <label for="time-single">Time (Single Day - Monday, Tuesday, Wednesday, or Thursday):</label>
+                    <select id="time-single" name="time-single">
+                        <option value="1-4">1:00 PM to 4:00 PM</option>
+                        <option value="2-5">2:00 PM to 5:00 PM</option>
+                        <option value="7-930">7:00 PM to 9:30 PM</option>
+                    </select>
+                    
+                    <label for="credits">Credit Hours:</label>
+                    <input type="text" id="credits" name="credits">
+
+                    <label for="instructorFirstName">Instructor First Name:</label>
+                    <input type="text" id="instructorFirstName" name="instructorFirstName">
+
+                    <label for="instructorLastName">Instructor Last Name:</label>
+                    <input type="text" id="instructorLastName" name="instructorLastName">
+
+                    <label for="enrollmentCap">Enrollment Cap:</label>
+                    <input type="text" id="enrollmentCap" name="enrollmentCap">
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </main>
+    </div>
+    <footer>Page Presented By Austin Amash | Gavin Burgess | Samuel Cremeans | Logan Stanley</footer>
+</body>
+</html>
