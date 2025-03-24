@@ -7,11 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <header>Programmer Manual</header>
+    <header>Programer Manual</header>
 
     <div class = "container">
       <nav>
-        <ul>
+        <button id="menu-toggle">☰ Menu</button> 
+        <ul id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="Enrollment Page.html">Enrollment</a></li>
           <li><a href="addinstructor.html">Add an Instructor</a></li>
@@ -22,8 +23,10 @@
         </ul>
       </nav>
 
+      
       <nav>
-        <ul>
+        <button id="menu-toggle2">☰ Menu</button> 
+        <ul id="nav-links2">
           <li><a href="#overview">Overview</a></li>
           <li><a href="#pages">Page Summaries</a></li>
           <li><a href="#forms">Form Elements</a></li>
@@ -86,6 +89,29 @@
             <li><strong>Course Section (id="courseSection"):</strong> A text input for the course section number.</li>
             <li><strong>Enrollment Cap (id="enrollmentCap"):</strong> A text input for setting the enrollment cap for the course.</li>
           </ul>
+
+          <h3>Register Course Page (registercourse.html)</h3>
+          <ul>
+            <li><strong>Student First Name (id="studentFirstName"):</strong> A text input for entering the first name of a student.</li>
+            <li><strong>Student Last Name (id="studentLastName"):</strong> A text input for entering the last name of a student.</li>
+            <li><strong>Semester (id="semester"):</strong> A dropdown element to select which semester the student is staking the course.</li>
+            <li><strong>Year (id="year"):</strong> A text input to add the year the student is taking the course.</li>
+            <li><strong>Course Prefix (id="coursePrefix"):</strong> A text input for the course prefix (e.g., "CS" for Computer Science).</li>
+            <li><strong>Course Number (id="courseNumber"):</strong> A text input for the course number (e.g., "101").</li>
+            <li><strong>Course Section (id="courseSection"):</strong> A text input for the course section number.</li>
+          </ul>
+
+          <h3>Drop Course Page (dropcourse.html)</h3>
+          <ul>
+            <li><strong>Student First Name (id="studentFirstName"):</strong> A text input for entering the first name of a student.</li>
+            <li><strong>Student Last Name (id="studentLastName"):</strong> A text input for entering the last name of a student.</li>
+            <li><strong>Semester (id="semester"):</strong> A dropdown element to select which semester the student is staking the course.</li>
+            <li><strong>Year (id="year"):</strong> A text input to add the year the student is taking the course.</li>
+            <li><strong>Course Prefix (id="coursePrefix"):</strong> A text input for the course prefix (e.g., "CS" for Computer Science).</li>
+            <li><strong>Course Number (id="courseNumber"):</strong> A text input for the course number (e.g., "101").</li>
+            <li><strong>Course Section (id="courseSection"):</strong> A text input for the course section number.</li>
+          </ul>
+
         </section>
     
         <!-- Functions Section -->
@@ -101,5 +127,5 @@
     </div>
 
     <footer>Page Presented By Austin Amash | Gavin Burgess | Samual Creameans | Logan Stanley</footer>
-
+    <script src = "script.js"></script>
 </body>
