@@ -99,6 +99,14 @@ input {
   border: 1px solid #ccc;
 }
 
+/* Select Dropdown */
+select {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
 /* Main Content */
 main {
   flex-grow: 1;
@@ -145,4 +153,30 @@ footer {
   margin:auto;
   display:block;
   border: 1px solid #ccc;
+}
+
+#menu-toggle {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: block; /* Always visible */
+}
+
+/* Hide navigation menu by default */
+#nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block; /* Visible by default */
+}
+
+#nav-links.hide {
+  display: none; /* Hidden when toggled */
 }
