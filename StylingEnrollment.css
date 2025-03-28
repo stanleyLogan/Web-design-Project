@@ -11,7 +11,86 @@ body {
 
 }
 
+.Parent-Container {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* creates an area for sidebar and then space for all other elements*/
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+}
 
+.Parent-Container header {
+  text-align: left;
+  grid-column:1/3;
+}
+
+.Parent-Container nav{
+  grid-column: 1;
+  justify-content: left;
+}
+.Parent-Container nav ul{
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  height: 100%;
+  margin-top: 0%;
+  justify-content: top;
+  gap: 5px;
+  background-color: #359dff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+.Parent-Container nav li{
+  list-style-type:none; 
+  margin-bottom: 5px;
+  background-color: white;
+  padding: 2px;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
+  justify-content: inherit;
+  margin-top: 20px;
+  margin-right: 15px;
+  
+}
+.Parent-Container nav li:hover{
+  transform: scale(1.05);
+}
+
+.Parent-Container nav li a{
+  text-decoration: none;
+  color: #359dff;
+  font-weight: 400;
+  font-size: 20px;
+  
+}
+.Parent-Container fieldset{/*This handels the little boarder around the form*/
+  margin-top: 0%;
+  border-style: unset; 
+  height: 100%;
+  margin-left: 0%;
+  margin-bottom: 0%;
+}
+
+
+.Parent-Container form{/*This handels to forum itself*/
+  grid-column: 2;
+  border: #359dff;
+  margin-top: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  
+ 
+}
+.Parent-Container legend{
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color:white;
+  background-color: #359dff;
+  font-family: Arial, sans-serif;
+  column-span: all;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.25);
+  
+}
 
 /* Header */
 header {
@@ -21,60 +100,8 @@ header {
   padding: 20px;
   font-size: 24px;
   font-weight: bold;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 6px rgba(1, 19, 152, 0.05);
   /* Add shadow for depth */
-}
-
-
-
-/* Navigation Bar */
-/*nav {
-  width: 220px;
-  background: #ffffff; White for contrast 
-  padding: 20px;
-  border-radius: 10px; Soft rounded edges 
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow 
-}*/
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav li {
-  margin: 10px 0;
-}
-
-nav a {
-  display: block;
-  background-color: #007bff;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  border-radius: 4%;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  /* Button depth */
-}
-
-nav a:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-  /* Slight enlarge effect */
-}
-
-/* Main Content */
-main {
-  flex-grow: 1;
-  padding: 30px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-  margin-left: 20px;
 }
 
 /* Footer */
@@ -91,41 +118,8 @@ footer {
   font-size: 14px;
 }
 
-form-page {
-  padding: 20px;
-  flex-grow: 1;
-  max-width: 800px;
-  margin: auto;
-}
 
-/*This is my work for the navigation bar on my page */
-/*The HTML links need updated */
-.Navigation-Horizontal {
-  display: inline-block;
-  margin: 0 15px;
-  text-align: left;
-  padding: 10px;
-}
-
-.Navigation-Horizontal a:hover {
-  color: #0056b3;
-  transform: scale(1.05)
-}
-.Navigation-Horizontal li {
-  display: inline-block;
-  margin: 15px;
-}
-.Navigation-Horizontal ul{
-  list-style: none;
-  padding: 0%;
-  margin: 0%;
-  display: inline-block;
-}
-#Navigation-Element{
-  text-align: left;
-  background: #0056b3;
-}
-button[type="submit"]{
+.Parent-Container button [type="submit"]{
   background-color: #f8f9fa;
   color: #007bff;
   padding: 10px;
