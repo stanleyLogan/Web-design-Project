@@ -24,43 +24,41 @@ body {
   grid-column:1/3;
 }
 
-.Parent-Container nav{
-  grid-column: 1;
-  justify-content: left;
-}
-.Parent-Container nav ul{
-  display: flex;
-  flex-direction: column;
-  text-decoration: none;
-  height: 100%;
-  margin-top: 0%;
-  justify-content: top;
-  gap: 5px;
-  background-color: #359dff;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-
-}
-.Parent-Container nav li{
-  list-style-type:none; 
-  margin-bottom: 5px;
-  background-color: white;
-  padding: 2px;
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.2);
-  justify-content: inherit;
-  margin-top: 20px;
-  margin-right: 15px;
-  
-}
-.Parent-Container nav li:hover{
-  transform: scale(1.05);
+nav {
+  width: 220px;
+  background: #ffffff; /* White for contrast */
+  padding: 20px;
+  border-radius: 10px; /* Soft rounded edges */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.Parent-Container nav li a{
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 10px 0;
+}
+
+nav a {
+  display: block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px;
+  text-align: center;
   text-decoration: none;
-  color: #359dff;
-  font-weight: 400;
-  font-size: 20px;
-  
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Button depth */
+}
+
+nav a:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight enlarge effect */
 }
 .Parent-Container fieldset{/*This handels the little boarder around the form*/
   margin-top: 0%;
@@ -128,5 +126,31 @@ footer {
   font-size: 16px;
   font-weight:bolder;
   
+}
+
+#menu-toggle,#menu-toggle2 {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: block; /* Always visible */
+}
+
+/* Hide navigation menu by default */
+#nav-links,#nav-links2 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: block; 
+}
+
+#nav-links.hide,#nav-links2.hide {
+  display: none; 
 }
 

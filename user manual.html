@@ -32,6 +32,7 @@
           <li><a href="#pages">Page Summaries</a></li>
           <li><a href="#descriptions">Detailed descriptions</a></li>
           <li><a href="#Home Page">Home Page</a></li>
+          <li><a href="#Enrollment">Enrollment Page</a></li>
           <li><a href="#Add Instructor">Add Instructor</a></li>
           <li><a href="#Add Course">Add a Course</a></li>
           <li><a href="#Course Registration">Course Registration</a></li>
@@ -70,17 +71,20 @@
           <section id = "Home Page">
             <h3>Home Page</h3>
             <p>There is no forms on this page. Only a navigation bar on the left that has a link to each page within the system.</p>
-
+          </section>
+          <section id = "Enrollment">
             <h3>Enrollment Page</h3>
             <p>The enrollment page will allow an instructor to add a student to enrollment</p>
             <h4>Layout</h4>
             <p>This page has five different fields.</p>
             <ul>
-              <li>First name: only charaters are acceptable(Example: John) </li>
-              <li>Last name: Also only charaters are acceptable(Example: Smith) </li>
+              <li>First name: only charaters are acceptable, no numbers or special scaracters allowed. (Example: John). </li>
+              <li>Last name: Also only charaters are acceptable(Example: Smith). </li>
               <li>Student year: Select the drop down box to select the year of the student.</li>
-              <li>Student Major: Just like the first and last name fields, you may only input charaters into this field(Example: Computer Science)</li>
-              <li>Student Email: Here is where you input the student's email. You should only insert charaters with the @ symbol.(Example: something@email.com)</li>
+              <li>Student Major: Just like the first and last name fields, you may only input charaters into this field(Example: Computer Science). </li>
+              <li>Student Email: Here is where you input the student's email. You should only insert charaters with the @ symbol.(Example: something@email.com). </li>
+              <li>Error message: Here are formatting rules: 1. All names must start with a capital letter (EX: John Smith).2. Student Majors must be capitalized (EX: Enviromental Science).3. Emails must follow conventional email format (EX: JohnSmith@yahoo.com).</li>
+              
             </ul>
             <p>Click the submit Enrollment button to save the student into the enrollment system.</p>
           </section>
@@ -91,10 +95,10 @@
             <h4>Layout</h4>
             <p>This page has five differnt fields to input information.</p>
             <ul>
-              <li>Instructor First Name:Like the enrollment page, acceptable inputs are characters only.(Example: John) </li>
-              <li>Instructor Last Name: Like the other forms only characters are allowed.(Example: Smith)</li>
-              <li>Instructor Department: Enter the department the instructor is in. Only characters for this form as well.(Example: Chemistry)</li>
-              <li>Instructor Email:Here is where you input the email for the instructor. You may use special characters in the form. (Example: something@email.com)</li>
+              <li>Instructor First Name:Like the enrollment page, acceptable inputs are characters only, no numbers or special characters allowed.(Example: John). The error message for this field is "First name must contain only letters and spaces." </li>
+              <li>Instructor Last Name: Like the other forms only characters are allowed, no numbers or special characters allowed.(Example: Smith). The error message for this field is "Last name must contain only letters and spaces."</li>
+              <li>Instructor Department: Enter the department the instructor is in. Only characters for this form as well, no numbers or special characters allowed (Example: Computer Science). The error message for this field is "Department must contain only letters and spaces."</li>
+              <li>Instructor Email:Here is where you input the email for the instructor. You may use special characters in the form. This field must have an "@" and follow the format abc123@marietta.edu. (Example: something@email.com). The error message for this field is "Email must follow the format: abc123@marietta.edu"</li>
               <li>Instructor Drop Down: use this dropdown box to select the rank for the instructor</li>
             </ul>
             <p>Click the Submit button to input the instructor into the system.</p>
@@ -106,18 +110,18 @@
             <h4>Layout:</h4>
             <p>There are 14 fields that you can enter information into</p>
             <ul>
-              <li>Semester: This is only a dropdown to select a semester(Fall, summer, spring)</li>
-              <li>Year:Add the year this course is offered. You may only input numbers into this form.(Example:2025)</li>
-              <li>Course Prefix: Add the prefix for the course into this form. This will only accept characters(Example: CSCI)</li>
-              <li>Course Number: Add the course number into this form. This will only accept numbers(Example: 101, 300, ect)</li>
-              <li>Course Section: Enter section for the course into this form. This will only accept numbers(Example: 01, 02, ect.)</li>
-              <li>Course name: Enter the name of the course into this form. This will only accept characters(Example: Programming 1) </li>
-              <li>Room: Enter the room and the number of the room into this form. This will accept both characters and numbers.(Example: Selby 239) </li>
+              <li>Semester: This is only a dropdown to select a semester, no numbers or special characters allowed. (Fall, summer, spring)</li>
+              <li>Year:Add the year this course is offered. You may only input numbers into this form.(Example:2025). The error message for this field is "Year must be four digits and not before 2025."</li>
+              <li>Course Prefix: Add the prefix for the course into this form. This will only accept characters, no numbers. (Example: CSCI). The error message for this field is "Course prefix must be three or four capital letters"</li>
+              <li>Course Number: Add the course number into this form. This will only accept numbers(Example: 101, 300, ect). The error message for this field is "Course Number must be 3 digits and not greater than 499."</li>
+              <li>Course Section: Enter section for the course into this form. This will only accept numbers(Example: 01, 02, ect.). The error message for this field is "Course Section must be exactly 2 digits."</li>
+              <li>Course name: Enter the name of the course into this form. This will only accept characters(Example: Programming 1).</li>
+              <li>Room: Enter the room and the number of the room into this form. This will accept both characters and numbers.(Example: Selby 239). The error message for this field is "Room must follow the format: BuildingName 123 or 123A." </li>
               <li>Time: The next four dropdowns are used to select the times for the course. Use the dropdown to select the time the course will be held.</li>
-              <li>Credit Hours: Use this form to input the amount of credit hours the course offers. This will only accept numbers(Example: 3) </li>
-              <li>Instructor First Name: Use this form to enter the first name of the Insturctor hosting the course. This will only accept characters(Example: John)</li>
-              <li>Instructor First Name: Use this form to enter the last name of the Insturctor hosting the course. This will only accept characters(Example: Smith)</li>
-              <li>Enrollment Cap: Enter the amount of students allowed in this course here. This will only accept numbers(Example: 28)</li>
+              <li>Credit Hours: Use this form to input the amount of credit hours the course offers. This will only accept numbers(Example: 3). The error message for this field is "Credit Hours must be between 0 and 4." </li>
+              <li>Instructor First Name: Use this form to enter the first name of the Insturctor hosting the course. This will only accept characters(Example: John). The error message for this field is "Instructor's First Name must contain only letters and spaces."</li>
+              <li>Instructor First Name: Use this form to enter the last name of the Insturctor hosting the course. This will only accept characters(Example: Smith). The error message for this field is "Instructor's Last Name must contain only letters and spaces."</li>
+              <li>Enrollment Cap: Enter the amount of students allowed in this course here. This will only accept numbers(Example: 28). The error message for this field is "Enrollment Cap must be a two-digit number."</li>
             </ul>
             <p>Use the submit button to add the course into the system.</p>
           </section>
@@ -128,13 +132,13 @@
             <h4>Layout</h4>
             <p>There are seven fields to enter information into.</p>
             <ul>
-              <li>Student First Name: Enter the student's first name here.</li>
-              <li>Student Last Name: Enter the student's last name here</li>
+              <li>Student First Name: Enter the student's first name here (Example: John). The error message for this field is "First Name is required and must contain only letters and spaces."</li>
+              <li>Student Last Name: Enter the student's last name here (Example: John). The error message for this field is "Last Name is required and must contain only letters and spaces."</li>
               <li>Semester: use the dropdown to select the semester the student is taking the course.</li>
-              <li>Year: Enter the year the student is taking course. Only numbers is accepted here(Example: 2025)</li>
-              <li>Course Prefix: Enter the course prefix here. Only charaters will be accepted here.(Example: CSCI)</li>
-              <li>Course Number: Enter the number for the course here. Only numbers should be input into here. (Example: 101, 300, ect.)</li>
-              <li>Course Section: Enter the section for the course here. You should only input numbers into this form.(Example: 01,02, ect.) </li>
+              <li>Year: Enter the year the student is taking course. Only numbers is accepted here(Example: 2025). The error message for this field is "Year must be 4 digits and not before 2025."</li>
+              <li>Course Prefix: Enter the course prefix here. Only charaters will be accepted here.(Example: CSCI). The error message for this field is "Course Prefix must be 3-4 uppercase letters."</li>
+              <li>Course Number: Enter the number for the course here. Only numbers should be input into here. (Example: 101, 300, ect.)The error message for this field is "Course Number must be 3 digits and ≤ 499."</li>
+              <li>Course Section: Enter the section for the course here. You should only input numbers into this form.(Example: 01,02, ect.) The error message for this field is "Course Section must be exactly 2 digits."</li>
             </ul>
             <p>Use the submit button to register the student into the course.</p>
           </section>
@@ -146,15 +150,16 @@
             <h4>Layout</h4>
             <p>There are seven fields to enter on this page.</p>
             <ul>
-              <li>Student First Name: Enter the student's first name in this page. There should only be characters entered into this form.(Example: John) </li>
-              <li>Student Last Name: Like the First name, enter the last name of the student into this form. This will also only be characters entered.(Example: Smith)</li>
-              <li>Semester: Enter the semester that the course to dropped here. It should only be characters.(Example: Spring) </li>
-              <li>Year: Enter the year the course is to be dropped. This will only be a numeric input.(Example: 2025) </li>
-              <li>Course Prefix: Enter the prefix for the course to be dropped. characters are only accepted in this form.(Example: CSCI) </li>
-              <li>Course Number: Enter the number for the course to be dropped here. It will only accept numbers.(Example: 101, 300, ect.) </li>
-              <li>Course Section: Enter the section of the course to be dropped here. It will only accept numbers as well.(Example: 01, 02, ect.) </li>
+              <li>Student First Name:Like the enrollment page, acceptable inputs are characters only, no numbers or special characters allowed.(Example: John). The error message for this field is "First name must contain only letters and spaces." </li>
+              <li>Student Last Name: Like the other forms only characters are allowed, no numbers or special characters allowed.(Example: Smith). The error message for this field is "Last name must contain only letters and spaces."</li>
+              <li>Semester: Enter the semester that the course to dropped here. It should only be characters, and is required.(Example: Spring). The error message for this field is "Semester is required" </li>
+              <li>Year: Enter the year the course is to be dropped. This will only be a numeric input, and it must only be four numbers and may only input current year or later.(Example: 2025) The error message for this field is "Year must be 2025 or later."</li>
+              <li>Course Prefix: Enter the prefix for the course to be dropped.Only three or four characters are only accepted in this field.(Example: CSCI). The error message for this field is "Course prefix must be 3 or 4 capital letters."</li>
+              <li>Course Number: Enter the number for the course to be dropped here. It will only accept three numbers.(Example: 101, 300, ect.). The error message for this field is "Course number must be a three-digit number." and "Course number cannot be greater than 499." </li>
+              <li>Course Section: Enter the section of the course to be dropped here. It will only accept two numbers as well.(Example: 01, 02, ect.). The error message for this field is "Course section must be a two-digit number." </li>
             </ul>
             <p>Press submit to drop the student from the course.</p>
+            
         </section>
 
         

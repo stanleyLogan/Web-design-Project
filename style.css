@@ -84,7 +84,31 @@ footer {
   font-size: 14px;
 }
 
-#menu-toggle {
+/* Button Styling (to match navigation menu) */
+main button {
+  display: inline-block;
+  background-color: #007bff;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Button depth */
+  border: none;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+main button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); /* Slight enlarge effect */
+}
+
+
+#menu-toggle,#menu-toggle2 {
     background: #007bff;
     color: white;
     border: none;
@@ -99,15 +123,14 @@ footer {
   }
   
   /* Hide navigation menu by default */
-  #nav-links {
+  #nav-links,#nav-links2 {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: block; /* Visible by default */
+    display: block; 
   }
   
-  #nav-links.hide {
-    display: none; /* Hidden when toggled */
+  #nav-links.hide,#nav-links2.hide {
+    display: none; 
   }
-
   
