@@ -98,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $student_id = $_POST['student_id'];
     echo "<h2>Courses for Selected Student</h2>";
 
-    $sql = "SELECT c.course_prefix, c.course_number, c.section, c.course_name, c.days_time, c.room, c.credit_hours, i.instructor_name, c.enrollment_cap
+    $sql = "SELECT c.course_prefix, c.course_number, c.course_section, c.course_name, c.time, c.room, c.hours, i.instructor_first, c.enrollment_cap
             FROM Registration r
             JOIN Courses c ON r.course_id = c.course_id
             JOIN Instructors i ON c.instructor_id = i.instructor_id
@@ -114,12 +114,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<tr>";
         echo "<td>" . htmlspecialchars($course['course_prefix']) . "</td>";
         echo "<td>" . htmlspecialchars($course['course_number']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['section']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['course_section']) . "</td>";
         echo "<td>" . htmlspecialchars($course['course_name']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['days_time']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['time']) . "</td>";
         echo "<td>" . htmlspecialchars($course['room']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['credit_hours']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['instructor_name']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['hours']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['instructor_first']) . "</td>";
         echo "<td>" . htmlspecialchars($course['enrollment_cap']) . "</td>";
         echo "</tr>";
       }
@@ -132,7 +132,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $instructor_id = $_POST['instructor_id'];
     echo "<h2>Courses Taught by Selected Instructor</h2>";
 
-    $sql = "SELECT course_prefix, course_number, section, course_name, days_time, room, credit_hours, enrollment_cap
+    $sql = "SELECT course_prefix, course_number, course_section, course_name, time, room, hours, enrollment_cap
             FROM Courses
             WHERE instructor_id = :instructor_id";
     $stmt = $pdo->prepare($sql);
@@ -146,11 +146,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<tr>";
         echo "<td>" . htmlspecialchars($course['course_prefix']) . "</td>";
         echo "<td>" . htmlspecialchars($course['course_number']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['section']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['course_section']) . "</td>";
         echo "<td>" . htmlspecialchars($course['course_name']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['days_time']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['time']) . "</td>";
         echo "<td>" . htmlspecialchars($course['room']) . "</td>";
-        echo "<td>" . htmlspecialchars($course['credit_hours']) . "</td>";
+        echo "<td>" . htmlspecialchars($course['hours']) . "</td>";
         echo "<td>" . htmlspecialchars($course['enrollment_cap']) . "</td>";
         echo "</tr>";
       }
