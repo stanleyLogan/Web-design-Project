@@ -13,12 +13,13 @@
       <nav>
         <button id="menu-toggle">☰ Menu</button> 
         <ul id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="Enrollment Page.html">Enrollment</a></li>
-          <li><a href="addinstructor.html">Add an Instructor</a></li>
-          <li><a href="addcourse.html">Add a Course</a></li>
-          <li><a href="registercourse.html">Register for Courses</a></li>
-          <li><a href="dropcourse.html">Need to drop a course?</a></li>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="Enrollment Page.php">Enrollment</a></li>
+          <li><a href="addinstructor.php">Add an Instructor</a></li>
+          <li><a href="addcourse.php">Add a Course</a></li>
+          <li><a href="registercourse.php">Register for Courses</a></li>
+          <li><a href="dropcourse.php">Need to drop a course?</a></li>
+          <li><a href="viewcourse.php">View Your Courses</a></li>
           <li><a href="manuels.html">Manuals</a></li>
         </ul>
       </nav>
@@ -117,10 +118,239 @@
         <!-- Functions Section -->
         <section id="functions">
           <h2>Functions</h2>
-          <p>There are currently no functions, they are to be added later.</p>
+          <p>Here is a description of functions for each script. </p>
+
+          <h3>script.js</h3>
+
+          <h2>1. Menu Toggle Functionality (`menu-toggle` and `menu-toggle2`)</h2>
+              <p><strong>Functionality:</strong> Toggles the visibility of two different sets of navigation links when the respective toggle buttons are clicked.</p>
+              <p><strong>Event Listeners:</strong>
+                  <ul>
+                      <li>The first button (`menu-toggle`) toggles the visibility of the first set of navigation links (`nav-links`).</li>
+                      <li>The second button (`menu-toggle2`) toggles the visibility of the second set of navigation links (`nav-links2`).</li>
+                  </ul>
+              </p>
+              <p><strong>CSS Class Used:</strong> <code>hide</code> – This class is toggled on the navigation elements to hide or show them, depending on the button clicked.</p>
+
+          <h4>DOM Manipulation Process</h4>
+
+              <p><strong>Event Handling:</strong> The code listens for the "click" event on both `menu-toggle` and `menu-toggle2`. When clicked, the corresponding `navLinks` or `navlinks2` element will have the `hide` class added or removed, which determines whether the navigation links are visible or hidden.</p>
+
+            </br>
+
+          <h3>Enrollment_Input_Validation.js</h3>
+
+          <h4>1. First Name Validation (`FirstName`)</h4>
+
+              <p><strong>Functionality:</strong> Ensures that the first name starts with an uppercase letter followed by 1 to 10 lowercase letters.</p>
+              <p><strong>Error Message:</strong> "First name must start with a capital letter and be followed by 1-10 lowercase letters."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[A-Z][a-z]{1,10}$</code> (matches the first character as uppercase and the following 1 to 10 characters as lowercase letters).</p>
+
+
+          <h4>2. Last Name Validation (`LastName`)</h4>
+
+              <p><strong>Functionality:</strong> Ensures that the last name starts with an uppercase letter followed by 1 to 10 lowercase letters.</p>
+              <p><strong>Error Message:</strong> "Last name must start with a capital letter and be followed by 1-10 lowercase letters."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[A-Z][a-z]{1,10}$</code> (matches the first character as uppercase and the following 1 to 10 characters as lowercase letters).</p>
+
+
+          <h4>3. Student Major Validation (`StudentMajor`)</h4>
+
+              <p><strong>Functionality:</strong> Ensures that the student major starts with an uppercase letter, followed by 1 to 15 lowercase letters, optionally followed by a space and an optional hyphen, followed by another uppercase letter and up to 15 lowercase letters.</p>
+              <p><strong>Error Message:</strong> "Student major must be capitalized and follow proper format (e.g., 'Environmental Science')."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[A-Z][a-z]{1,15}\s?\-?[A-Z]?[a-z]{0,15}$</code> (matches a capitalized major with optional space and hyphen).</p>
+
+          <h4>4. Student Email Validation (`StudentEmail`)</h4>
+
+              <p><strong>Functionality:</strong> Ensures that the student email is in a valid format.</p>
+              <p><strong>Error Message:</strong> "Email must follow a conventional format (e.g., 'johnsmith@example.com')."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[0-9A-Za-z"'-]{0,25}@[A-Za-z\.0-9]+\.(com|org|gov|co|edu|net)$</code> (matches common email formats like `name@domain.com`).</p>
+
+
+          <h4>Validation Process (`Submit-Button` Click Event)</h4>
+
+              <p><strong>Functionality:</strong> Triggers the validation process when the "Submit-Button" is clicked. Each form field is validated asynchronously using promises. The validation checks if the values match their respective regex patterns and ensures that the fields are not empty.</p>
+              <p><strong>Process:</strong> 
+                  <ul>
+                      <li>For each form field, a validation check is applied using the corresponding regex pattern.</li>
+                      <li>If a field is invalid, its `ValidationData` attribute is set to `false`.</li>
+                      <li>After all promises resolve, an alert box is generated that either displays an error message or confirms successful submission.</li>
+                  </ul>
+              </p>
+
+
+          <h4>Alert Box Construction (`AlertBoxConstructor`)</h4>
+
+              <p><strong>Functionality:</strong> Constructs and displays an alert box based on the validation results. If there are any errors, it shows the fields with issues. If all fields are valid, it shows a summary of the correctly submitted data.</p>
+              <p><strong>Error Message:</strong> If any fields are invalid, an alert lists the fields with issues and provides formatting rules for correction.</p>
+              <p><strong>Success Message:</strong> If all fields are valid, an alert displays the submitted data to confirm the form submission.</p>
+
+
+          <h4>Example Flow</h4>
+
+              <p><strong>1. User fills out the form and clicks the submit button.</strong></p>
+              <p><strong>2. Each field is validated asynchronously using the defined regex patterns.</strong></p>
+              <p><strong>3. If any fields are invalid, an error message displays the incorrect fields and provides instructions to correct them.</strong></p>
+              <p><strong>4. If all fields are valid, the form submission is confirmed with an alert displaying the submitted data.</strong></p>
+
+          <h4>Key Considerations</h4>
+
+              <ul>
+                  <li>The event listener prevents the form's default submission behavior to allow for custom validation.</li>
+                  <li>Each validation is handled asynchronously using promises to ensure that all fields are checked before showing the final alert.</li>
+                  <li>The alert box dynamically generates messages based on the validation results.</li>
+              </ul>
+
+            </br>
+          <h3>addInstructor.js</h3>
+          <h4>1. firstNameString</h4>
+          <p><strong>Functionality:</strong>Pulls the data from the first name field using "const firstName = document.getElementById('instructorFirstName').value.trim();" and ensures that the first name contains only letters and spaces.</p>
+          <p><strong>Error Message:</strong> "First name must contain only letters and spaces."</p>
+          <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]+$</code> (matches only alphabetic characters and spaces).</p>
+
+          <h4>2. lastNameString</h4>
+          <p><strong>Functionality:</strong> Pulls the data from the last name field using "const lastName = document.getElementById('instructorLastName').value.trim();" and ensures that the last name contains only letters and spaces.</p>
+          <p><strong>Error Message:</strong> "Last name must contain only letters and spaces."</p>
+          <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]+$</code> (matches only alphabetic characters and spaces).</p>
+
+          <h4>3. Department</h4>
+          <p><strong>Department Validation:</strong>Pulls data from the department field using "const department = document.getElementById('instructorDept').value.trim();" and ensures the department contains only letters and spaces.</p>
+          <p><strong>Error Message:</strong> "Department must contain only letters and spaces."</p>
+          <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]*$</code></p>
+          
+          <h4>4. emailValidation</h4>
+          <p><strong>Email Validation:</strong>Pulls data from the email field using "const email = document.getElementById('instructorEmail').value.trim();" and ensures the email follows the pattern "abc123@marietta.edu".</p>
+          <p><strong>Error Message:</strong> "Email must follow the format: abc123@marietta.edu"</p>
+          <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z]{3}\d{3}@marietta\.edu$</code></p>
+          </ul>
+
+          <h3>dropCourseScript.js</h3>
+          <h4>1. First Name Validation (`studentFirstName`)</h4>
+          <p><strong>Functionality:</strong> Ensures that the first name contains only letters and spaces.</p>
+          <p><strong>Error Message:</strong> "First name must contain only letters and spaces."</p>
+          <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]+$</code> (matches only alphabetic characters and spaces).</p>
+          
+          <h4>2. Last Name Validation (`studentLastName`)</h4>
+          <p><strong>Functionality:</strong> Ensures that the last name contains only letters and spaces.</p>
+          <p><strong>Error Message:</strong> "Last name must contain only letters and spaces."</p>
+          <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]+$</code> (matches only alphabetic characters and spaces).</p>
+    
+
+          <h4>3. Semester Validation (`semester`)</h4>
+    
+          <p><strong>Functionality:</strong> Ensures that the semester field is not empty.</p>
+          <p><strong>Error Message:</strong> "Semester is required."</p>
+    
+
+          <h4>4. Year Validation (`year`)</h4>
+          <p><strong>Functionality:</strong> Ensures that the year is a four-digit number and 2025 or later.</p>
+          <p><strong>Error Message:</strong> 
+            <ul>
+                <li>"Year must be a four-digit number."</li>
+                <li>"Year must be 2025 or later."</li>
+            </ul>
+          </p>
+          <p><strong>Validation Pattern:</strong> <code>^\d{4}$</code> (matches exactly four digits).</p>
+          <p><strong>Additional Check:</strong> If the entered year is less than 2025, the validation fails.</p>
+
+          <h4>5. Course Prefix Validation (`coursePrefix`)</h4>
+          <p><strong>Functionality:</strong> Ensures that the course prefix is composed of 3 or 4 uppercase letters.</p>
+          <p><strong>Error Message:</strong> "Course prefix must be 3 or 4 capital letters."</p>
+          <p><strong>Validation Pattern:</strong> <code>^[A-Z]{3,4}$</code> (matches uppercase alphabetic characters, 3 or 4 characters long).</p>
+
+          <h4>6. Course Number Validation (`courseNumber`)</h4>
+          <p><strong>Functionality:</strong> Ensures that the course number is a three-digit number and not greater than 499.</p>
+          <p><strong>Error Message:</strong>
+            <ul>
+                <li>"Course number must be a three-digit number."</li>
+                <li>"Course number cannot be greater than 499."</li>
+            </ul>
+          </p>
+          <p><strong>Validation Pattern:</strong> <code>^\d{3}$</code> (matches exactly three digits).</p>
+          <p><strong>Additional Check:</strong> If the course number exceeds 499, the validation fails.</p>
+
+          <h4>7. Course Section Validation (`courseSection`)</h4>
+          <p><strong>Functionality:</strong> Ensures that the course section is a two-digit number.</p>
+          <p><strong>Error Message:</strong> "Course section must be a two-digit number."</p>
+          <p><strong>Validation Pattern:</strong> <code>^\d{2}$</code> (matches exactly two digits).</p>
+
+          <h4>Validation and Submission Process</h4>
+          <p><strong>Form Event Listener:</strong> The <code>submit</code> event listener is attached to the form, triggering the validation checks when the user attempts to submit.</p>
+          <p><strong>Error Handling:</strong> If invalid input is detected, the form submission is prevented, and an alert with the error messages is shown to the user indicating which fields contain invalid data.</p>
+          <p><strong>Success Message:</strong> If all validations pass, a success message will display the values entered by the user, confirming that the form is ready to be processed.</p>
+
+          </br>
+          <h3>addCourseScript.js</h3>
+          <h4>1. Time Dropdown Visibility Based on Day Selection (`updateTimeDropdown`)</h4>
+          <p><strong>Functionality:</strong> This function dynamically shows or hides the time dropdowns based on the selected day in the `daySelect` dropdown.</p>
+          <pre><code>function updateTimeDropdown() {\n    for (let key in timeDropdowns) {\n        timeDropdowns[key].hidden = true;\n    }\n    const selectedDay = daySelect.value;\n    if (timeDropdowns[selectedDay]) {\n        timeDropdowns[selectedDay].hidden = false;\n    }\n}</code></pre>
+          <p><strong>Event Listener:</strong> The event listener listens for the `change` event on the `daySelect` dropdown to trigger the update.</p>
+          <pre><code>if (daySelect) {\n    daySelect.addEventListener("change", updateTimeDropdown);\n    updateTimeDropdown(); // Initialize on load\n}</code></pre>
+
+          <h3>Form Validation and Submission</h3>
+          <h4>2. Form Validation and Submission Handling (`form`) </h4>
+          <p><strong>Functionality:</strong> Validates the user input before submitting the form. It checks for correct formats and required fields.</p>
+          <p><strong>Validation:</strong> The form checks fields like `year`, `coursePrefix`, `courseNumber`, etc., against defined patterns. If any validation fails, the submission is halted, and error messages are displayed.</p>
+
+          <h4>3. Error Handling</h4>
+          <p><strong>Functionality:</strong> If the form data is invalid, an alert with detailed error messages is shown to the user, indicating which fields contain invalid data.</p>
+          <p><strong>Success Handling:</strong> If the form passes validation, a success message displaying the entered data is shown.</p>
+
+          </br>
+
+          <h3>registercourse.js</h3>
+
+          <h4>1. First Name Validation (`studentFirstName`)</h4>
+              <p><strong>Functionality:</strong> Ensures that the first name contains only letters and spaces.</p>
+              <p><strong>Error Message:</strong> "First Name is required and must contain only letters and spaces."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]+$</code> (matches only alphabetic characters and spaces).</p>
+
+          <h4>2. Last Name Validation (`studentLastName`)</h4>
+              <p><strong>Functionality:</strong> Ensures that the last name contains only letters and spaces.</p>
+              <p><strong>Error Message:</strong> "Last Name is required and must contain only letters and spaces."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[a-zA-Z\s]+$</code> (matches only alphabetic characters and spaces).</p>
+
+          <h4>3. Year Validation (`year`)</h4>
+              <p><strong>Functionality:</strong> Ensures that the year is a four-digit number and is not before 2025.</p>
+              <p><strong>Error Message:</strong>
+                  <ul>
+                      <li>"Year must be 4 digits."</li>
+                      <li>"Year must not be before 2025."</li>
+                  </ul>
+              </p>
+              <p><strong>Validation Pattern:</strong> <code>^\d{4}$</code> (matches exactly four digits).</p>
+              <p><strong>Additional Check:</strong> If the entered year is less than 2025, the validation fails.</p>
+
+          <h4>4. Course Prefix Validation (`coursePrefix`)</h4>
+              <p><strong>Functionality:</strong> Ensures that the course prefix is composed of 3 or 4 uppercase letters.</p>
+              <p><strong>Error Message:</strong> "Course Prefix must be 3–4 uppercase letters."</p>
+              <p><strong>Validation Pattern:</strong> <code>^[A-Z]{3,4}$</code> (matches 3 or 4 uppercase letters).</p>
+
+          <h4>5. Course Number Validation (`courseNumber`)</h4>
+              <p><strong>Functionality:</strong> Ensures that the course number is a 3-digit number and less than or equal to 499.</p>
+              <p><strong>Error Message:</strong>
+                  <ul>
+                      <li>"Course Number must be 3 digits."</li>
+                      <li>"Course Number must be less than or equal to 499."</li>
+                  </ul>
+              </p>
+              <p><strong>Validation Pattern:</strong> <code>^\d{3}$</code> (matches exactly three digits).</p>
+              <p><strong>Additional Check:</strong> If the course number exceeds 499, the validation fails.</p>
+
+          <h4>6. Course Section Validation (`courseSection`)</h4>
+              <p><strong>Functionality:</strong> Ensures that the course section is exactly 2 digits.</p>
+              <p><strong>Error Message:</strong> "Course Section must be exactly 2 digits."</p>
+              <p><strong>Validation Pattern:</strong> <code>^\d{2}$</code> (matches exactly two digits).</p>
+
+          <h4>Validation and Submission Process</h4>
+              <p><strong>Form Event Listener:</strong> The <code>submit</code> event listener is attached to the form, triggering the validation checks when the user attempts to submit.</p>
+              <p><strong>Error Handling:</strong> If any field contains invalid data, the form submission is prevented, and an alert with the error messages is shown to the user, indicating which fields have issues.</p>
+              <p><strong>Success Message:</strong> If all validations pass, a success message is displayed with the entered values, confirming that the form is ready for submission.</p>
+
+          
         </section>
     
-           
+        
 
       </main>
 

@@ -7,9 +7,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body> 
-    <header>User Manuals</header>
+    <header>Welcome to Student Registration!</header>
 
-    <div class = "container">
+    <div class="container">
       <nav>
         <button id="menu-toggle">☰ Menu</button> 
         <ul id="nav-links">
@@ -24,18 +24,15 @@
         </ul>
       </nav>
 
-        <script src = "script.js"></script>
-
       <main>
-        <p>This Page includes the User and Programer Manuels<br>Just select a manuel you choose.</p>
-        <button onclick="location.href='User Manual.html'">User Manual</button>
-        <button onclick="location.href='Programer Manual.html'">Programer Manual</button>
-
+        <p>This system allows students to register for courses, manage instructors, and view course enrollments. <br>
+        To start, just click a link in the navigation bar.</p>
       </main>
 
     </div>
 
     <footer>Page Presented By Austin Amash | Gavin Burgess | Samual Creameans | Logan Stanley</footer>
 
-
+    <script src="script.js"></script> 
 </body>
+</html>

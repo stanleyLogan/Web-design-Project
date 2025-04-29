@@ -29,9 +29,7 @@ header {
 
 /* Navigation Bar */
 nav {
-  position: left;
   width: 220px;
-  height: 90%;
   background: #ffffff; /* White for contrast */
   padding: 20px;
   border-radius: 10px; /* Soft rounded edges */
@@ -66,6 +64,7 @@ nav a:hover {
   background-color: #0056b3;
   transform: scale(1.05); /* Slight enlarge effect */
 }
+
 
 .form-container {
   display: flex;
