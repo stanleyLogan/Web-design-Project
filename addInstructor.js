@@ -60,9 +60,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
 
         // Display values
-        if (isValid) {
-            alert(`First Name: ${firstName}\nLast Name: ${lastName}\nDepartment: ${department}\nEmail: ${email}`);
-        }
+        //if (isValid) {
+        //    alert(`First Name: ${firstName}\nLast Name: ${lastName}\nDepartment: ${department}\nEmail: ${email}`);
+        //}
 
         // Validation failure message
         if (!isValid) {
