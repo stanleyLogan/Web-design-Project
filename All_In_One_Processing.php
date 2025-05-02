@@ -12,11 +12,16 @@
         <header id="Navigation-Header">Navigation</header>
         <nav>
             <!-- this is the bar of navigation links under the header -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="index.html">Student Enrollment</a></li>
-                <li><a href="index.html">Course Adds</a></li>
-                <li><a href="index.html">Course Drops</a></li>
+            <ul id="nav-links">
+              <li><a href="index.php">Home</a></li>
+              <li><a href="All_In_One_Processing.php">Enrollment</a></li>
+              <li><a href="addinstructor.html">Add an Instructor</a></li>
+              <li><a href="addcourse.html">Add a Course</a></li>
+              <li><a href="registercourse.html">Register for Courses</a></li>
+              <li><a href="dropcourse.php">Need to drop a course?</a></li>
+              <li><a href="manuels.html">Manuals</a></li>
+              <li><a href="viewcourse.php">View Your Courses</a></li>
+              <li><a href="viewenrollment.php">View Students</a></li>
             </ul>
         </nav> 
         <?php
@@ -24,7 +29,7 @@
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $Host = 'localhost';
             $DB_Name = 'web design';
-            $User_Name = 'WebDevelopement';
+            $User_Name = 'root';
             $Password = ''; #must be an empty string do not remove
 
             try {
@@ -58,8 +63,8 @@
 
                     if (empty($Student_Year)) {
                         $Error_Array['StudentYear'] = "Student Year is required.";
-                    } elseif (!in_array($Student_Year, ['2022', '2023', '2024', '2025', '2026', '2027'])) {
-                        $Error_Array['StudentYear'] = "Invalid Student Year.(2022-2027)";
+                    } elseif (!in_array($Student_Year, ['Freshman', 'Sophomore', 'Junior', 'Senior'])) {
+                        $Error_Array['StudentYear'] = "Invalid Student Year. (Freshman - Senior)";
                     }
 
                     if (!preg_match($Regex_Student_Email, $Student_Email)) {
@@ -112,12 +117,10 @@
                 <label for="studentYear">Student Year:</label>
                     <input type="text" id="StudentYear" name="StudentYear" list="years" placeholder="Select year">
                     <datalist id="years">
-                        <option value="2022">
-                        <option value="2023">
-                        <option value="2024">
-                        <option value="2025">
-                        <option value="2026">
-                        <option value="2027">
+                        <option value="Freshman">
+                        <option value="Sophomore">
+                        <option value="Junior">
+                        <option value="Senior">
                     </datalist>
                     <?php if (isset($Error_Array['StudentYear'])) : ?>
                         <span class="Error"><?php echo htmlspecialchars($Error_Array['StudentYear']); ?></span>

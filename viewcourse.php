@@ -14,10 +14,10 @@
         <button id="menu-toggle">☰ Menu</button> 
         <ul id="nav-links">
           <li><a href="index.php">Home</a></li>
-          <li><a href="Enrollment Page.php">Enrollment</a></li>
-          <li><a href="addinstructor.php">Add an Instructor</a></li>
-          <li><a href="addcourse.php">Add a Course</a></li>
-          <li><a href="registercourse.php">Register for Courses</a></li>
+          <li><a href="All_In_One_Processing.php">Enrollment</a></li>
+          <li><a href="addinstructor.html">Add an Instructor</a></li>
+          <li><a href="addcourse.html">Add a Course</a></li>
+          <li><a href="registercourse.html">Register for Courses</a></li>
           <li><a href="dropcourse.php">Need to drop a course?</a></li>
           <li><a href="manuels.html">Manuals</a></li>
         </ul>
@@ -98,11 +98,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $student_id = $_POST['student_id'];
     echo "<h2>Courses for Selected Student</h2>";
 
-    $sql = "SELECT c.course_prefix, c.course_number, c.section, c.course_name, c.days_time, c.room, c.credit_hours, i.instructor_name, c.enrollment_cap
-            FROM Registration r
-            JOIN Courses c ON r.course_id = c.course_id
-            JOIN Instructors i ON c.instructor_id = i.instructor_id
-            WHERE r.student_id = :student_id";
+    $sql = "SELECT 
+            c.course_prefix, 
+            c.course_number, 
+            c.course_section, 
+            c.course_name, 
+            CONCAT(c.days_offered, ' ', c.time) AS days_time,
+            c.room, 
+            c.hours AS credit_hours, 
+            CONCAT(i.instructor_first, ' ', i.instructor_last) AS instructor_name,
+            c.enrollment_cap
+        FROM registration r
+        JOIN courses c ON r.course_id = c.course_id
+        JOIN instructors i ON c.instructor_id = i.instructor_id
+        WHERE r.student_id = :student_id";
     $stmt = $pdo->prepare($sql);
     $stmt->execute(['student_id' => $student_id]);
     $courses = $stmt->fetchAll(PDO::FETCH_ASSOC);

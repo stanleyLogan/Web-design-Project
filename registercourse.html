@@ -12,21 +12,23 @@
         <nav>
             <button id="menu-toggle">☰ Menu</button> 
             <ul id="nav-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="Enrollment Page.html">Enrollment</a></li>
+              <li><a href="index.php">Home</a></li>
+              <li><a href="All_In_One_Processing.php">Enrollment</a></li>
               <li><a href="addinstructor.html">Add an Instructor</a></li>
               <li><a href="addcourse.html">Add a Course</a></li>
               <li><a href="registercourse.html">Register for Courses</a></li>
-              <li><a href="dropcourse.html">Need to drop a course?</a></li>
+              <li><a href="dropcourse.php">Need to drop a course?</a></li>
               <li><a href="manuels.html">Manuals</a></li>
+              <li><a href="viewcourse.php">View Your Courses</a></li>
+              <li><a href="viewenrollment.php">View Students</a></li>
             </ul>
           </nav>
 
-          <script src = "script.js"></script>
+        
         <main>
             <p>This page allows students to register for courses.</p>
             <div class="form-container">
-                <form>
+                <form action = "registercourse.php" method = "get">
                     <label for="studentFirstName">Student First Name:</label>
                     <input type="text" id="studentFirstName" name="studentFirstName">
                     
@@ -58,5 +60,7 @@
         </main>
     </div>
     <footer>Page Presented By Austin Amash | Gavin Burgess | Samuel Cremeans | Logan Stanley</footer>
+    <script src = "registerCourseScript.js"></script>
 </body>
+
 </html>

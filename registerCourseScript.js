@@ -71,19 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
         isValid = false;
         errorMessage += "Course Section must be exactly 2 digits.\n";
       }
-
-      if (!isValid) {
-        event.preventDefault();
-        alert(errorMessage);
-      } else {
-        event.preventDefault();
-        alert(
-          `Registration Successful!\n` +
-          `Name: ${firstName} ${lastName}\n` +
-          `Semester: ${semester} ${year}\n` +
-          `Course: ${prefix} ${number}-${section}`
-        );
-      }
     });
   }
 });

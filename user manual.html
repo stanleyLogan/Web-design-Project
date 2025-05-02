@@ -14,10 +14,10 @@
         <button id="menu-toggle">☰ Menu</button> 
         <ul id="nav-links">
           <li><a href="index.php">Home</a></li>
-          <li><a href="Enrollment Page.php">Enrollment</a></li>
-          <li><a href="addinstructor.php">Add an Instructor</a></li>
-          <li><a href="addcourse.php">Add a Course</a></li>
-          <li><a href="registercourse.php">Register for Courses</a></li>
+          <li><a href="All_In_One_Processing.php">Enrollment</a></li>
+          <li><a href="addinstructor.html">Add an Instructor</a></li>
+          <li><a href="addcourse.html">Add a Course</a></li>
+          <li><a href="registercourse.html">Register for Courses</a></li>
           <li><a href="dropcourse.php">Need to drop a course?</a></li>
           <li><a href="viewcourse.php">View Your Courses</a></li>
           <li><a href="manuels.html">Manuals</a></li>

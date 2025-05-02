@@ -21,10 +21,10 @@ document.addEventListener("DOMContentLoaded", function() {
   // ---- Time Dropdown Visibility Based on Day Selection ----
   const daySelect = document.getElementById("days");
   const timeDropdowns = {
-    "MWF": document.getElementById("wrap-time-mwf"),
-    "MW": document.getElementById("wrap-time-mw"),
-    "TTH": document.getElementById("wrap-time-tth"),
-    "SD": document.getElementById("wrap-time-single")
+    "Monday, Wednesday,Friday": document.getElementById("wrap-time-mwf"),
+    "Monday,Wednesday": document.getElementById("wrap-time-mw"),
+    "Tuesday, Thursday": document.getElementById("wrap-time-tth"),
+    "Single Day": document.getElementById("wrap-time-single")
   };
 
 
@@ -116,23 +116,6 @@ document.addEventListener("DOMContentLoaded", function() {
       if (!enrollmentCap.match(enrollmentCapPattern)) {
         isValid = false;
         errorMessage += "Enrollment Cap must be a two-digit number.\n";
-      }
-
-      if (!isValid) {
-        event.preventDefault();
-        alert(errorMessage);
-      } else {
-        event.preventDefault();
-        alert(
-          `Course Created!\n` +
-          `Semester: ${semester} ${year}\n` +
-          `Course: ${coursePrefix} ${courseNumber}-${courseSection} - ${courseName}\n` +
-          `Room: ${room || "N/A"}\n` +
-          `Days/Time: ${selectedDay} @ ${selectedTime}\n` +
-          `Credit Hours: ${credits}\n` +
-          `Instructor: ${instructorFirstName} ${instructorLastName}\n` +
-          `Enrollment Cap: ${enrollmentCap}`
-        );
       }
     });
   }
